@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salary Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/your_font_awesome_kit_id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<form>
+		<label for="hourly-rate">Hourly Rate:</label>
+		<input type="number" id="hourly-rate" required>
+		<label for="hours-per-week">Hours Per Week:</label>
+		<input type="number" id="hours-per-week" required>
+		<label for="notes">Notes:</label>
+		<textarea id="notes"></textarea>
+		<button type="submit">Calculate <i class="fas fa-money-bill-wave"></i></button>
+	</form>
+
+	<div id="results-container">
+		<div class="result-box">
+			<h2 class="big-text">Results</h2>
+			<p><span class="result-label">Weekly Salary:</span> <span id="weekly-salary"></span></p>
+			<p><span class="result-label">Monthly Salary:</span> <span id="monthly-salary"></span></p>
+			<p><span class="result-label">Annual Salary:</span> <span id="annual-salary"></span></p>
+		</div>
+	</div>
+
+	<div id="example-container">
+		<div class="example-box">
+			<h2>Example 1</h2>
+			<p>Hourly Rate: $20</p>
+			<p>Hours Per Week: 40</p>
+			<p><a href="#" onclick="populateForm(20, 40); document.getElementById('annual-salary').innerHTML = '$41,600';">Use this example (Annual Salary: $41,600)</a></p>
+		</div>
+		<div class="example-box">
+			<h2>Example 2</h2>
+			<p>Hourly Rate: $23</p>
+			<p>Hours Per Week: 37.5</p>
+			<p>Monthly Salary: $3,843.75</p>
+			<p>Annual Salary: $46,125</p>
+			<p><a href="#" onclick="populateForm(23, 37.5); document.getElementById('monthly-salary').innerHTML = '$3,843.75'; document.getElementById('annual-salary').innerHTML = '$46,125';">Use this example</a></p>
+		</div>
+		<div class="example-box">
+			<h2>Example 3</h2>
+			<p>Hourly Rate: $26</p>
+			<p>Hours Per Week: 30</p>
+			<p><a href="#" onclick="populateForm(26, 30)">Use this example</a></p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
