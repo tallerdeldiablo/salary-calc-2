@@ -1,0 +1,127 @@
+:root {
+	--primary-color: #007bff;
+	--secondary-color: #f5f5f5;
+	--box-background-color: #fff;
+	--box-border-radius: 8px;
+	--box-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	--box-padding: 16px;
+	--form-max-width: 400px;
+	--example-box-flex-basis: 300px;
+	--text-color: #000;
+	--font-family: Arial, sans-serif;
+	--font-size: 16px;
+	--result-box-max-width: 400px;
+	--result-box-margin-top: 32px;
+	--example-box-text-color: #888;
+}
+
+body {
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	font-size: var(--font-size);
+}
+
+form {
+	background-color: var(--box-background-color);
+	border-radius: var(--box-border-radius);
+	padding: var(--box-padding);
+	box-shadow: var(--box-box-shadow);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: var(--form-max-width);
+	margin-top: 32px;
+	margin-right: 16px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	text-align: center;
+}
+
+form input[type="number"] {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	font-size: var(--font-size);
+}
+
+form button {
+	padding: 8px;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--primary-color);
+	color: #fff;
+	font-size: var(--font-size);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#results-container, #fixed-results-container {
+	display: flex;
+	background-color: var(--box-background-color);
+	border-radius: var(--box-border-radius);
+	padding: var(--box-padding);
+	box-shadow: var(--box-box-shadow);
+	margin-top: var(--result-box-margin-top);
+	margin-right: 16px;
+	width: 100%;
+	max-width: var(--result-box-max-width);
+	flex-direction: column;
+	align-items: center;
+}
+
+.result-box {
+	margin: 8px;
+	text-align: center;
+	font-size: var(--font-size);
+}
+
+.result-box h2 {
+	margin-top: 0;
+}
+
+.result-box p {
+	margin: 8px 0;
+	line-height: 1.5;
+}
+
+.example-box {
+	background-color: #fff;
+	padding: 16px;
+	border-radius: var(--box-border-radius);
+	box-shadow: var(--box-box-shadow);
+	color: var(--example-box-text-color);
+}
+
+.example-box h2 {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.example-box p {
+	margin: 8px 0;
+	line-height: 1.5;
+}
+
+.big-text {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.small-text {
+	font-size: 14px;
+}
